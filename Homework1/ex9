@@ -1,0 +1,32 @@
+s1 = input()                    # считываем число элементов N и параметр t
+lst1 = s1.split()
+N = int(lst1[0])
+t = int(lst1[1])
+
+s2 = input()                    # инициализируем и заполняем массив длинной N числел
+lst2 = s2.split()
+a = [0] * N
+for i in range(N):
+    a[i] = int(lst2[i])
+
+tree = [0] * N                    # Инициализируем и заполняем дерево Фенвика
+for i in range(N):
+    k = i&(i+1)
+    for l in range(k, i+1):
+        tree[i] = tree[i] + a[l]
+
+result = 0                          # Реализуем пересчет
+for L in range(N):                  # Считаем сумму для фиксированной нижней границы
+    for R in range(L, N):           # Считаем сумму для фиксированной нижней и верхней границы
+        sum = 0                     # Кладем эту сумму в переменную sum
+        L0 = L - 1                  # Создаем вспомогательные переменные
+        R0 = R
+        while R0 >= 0:
+            sum = sum + tree[R0]
+            R0 = (R0 & (R0 + 1)) - 1
+        while L0 >= 0:
+            sum = sum - tree[L0]
+            L0 = (L0 & (L0 + 1)) - 1
+        if sum < t:
+            result = result + 1
+print(result)
