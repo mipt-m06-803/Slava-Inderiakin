@@ -2,7 +2,7 @@ N = int(input())
 a = 0                               # число делителей
 for i in range(2, N//2 + 1):        # range(N) = [0, N)
     if N % i == 0:
-        a = a + 1
+        a += 1
 if a == 0:
     print("Простое число")
 else:
