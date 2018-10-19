@@ -6,10 +6,10 @@ def find(s):
     s = s.replace('.', ' ')             # заменяем точки
     l = s.split()                       # дробим строку на слова
 
-    a = 0                               # иициализируем максимальную длину
+    a = ''                             # создаем переменную под самое длинное слово
     for i in range(len(l)):
-        if len(l[i]) > a:
-            a = len(l[i])
+        if len(l[i]) > len(a):
+            a = l[i]
     return(a)
 
 
