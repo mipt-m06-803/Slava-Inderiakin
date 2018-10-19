@@ -2,9 +2,11 @@
 # На вход подается строка, состоящая из разделенных запятыми слов, часть которых - цифры. Требуется получить список из целых чисел, равных этим цифрам. Для решения использовать генераторы списков и метод объектов типа str isdigit()
 
 def Read(s):
-    l = [el for el in s.replace(' ', '') if el.isdigit()]
+    l = [int(el) for el in s.replace(' ', '') if el.isdigit()]
     return(l)
 
 
 S = str(input())
-print(Read(S))
+L = Read(S)
+print(L)
+print(type(L[1]))
