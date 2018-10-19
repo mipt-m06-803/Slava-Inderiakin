@@ -4,8 +4,7 @@
 def multiply(s, n):
     r = ''
     for char in s:
-        for i in range(n):
-            r = r + char
+        r = r + char * n
     return r
 
 
