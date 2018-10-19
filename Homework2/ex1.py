@@ -6,7 +6,7 @@ def inversia(s):
         return None
     else:
         s1 = s[: len(s)//2]
-        s2 = s[len(s) - 1 : len(s)//2 - 1 : -1]
+        s2 = s[: len(s)//2 - 1 : -1]
         s = s1 + s2
         return (s)
 
