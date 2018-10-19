@@ -5,11 +5,11 @@ def division(s):
     l = s.split()
     l1 = list()
     l2 = list()
-    for str in l:
-        if str[0].isupper():
-            l1.append(str)
+    for el in l:
+        if el[0].isupper():
+            l1.append(el)
         else:
-            l2.append(str)
+            l2.append(el)
 
     return l1, l2
 
