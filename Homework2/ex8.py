@@ -15,3 +15,4 @@ def Check(s1, s2):
 S1 = str(input())
 S2 = str(input())
 print(Check(S1, S2))
+ 
