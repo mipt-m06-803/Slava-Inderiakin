@@ -12,3 +12,4 @@ S = str(input())
 N = int(input())
 R = multiply(S, N)
 print(R)
+ 
