@@ -2,9 +2,11 @@
 # На вход подается строка, состоящая из разделенных пробелами цифр. Получите из строки список целых чисел, используя генераторы списков.
 
 def Read(s):
-    l = [el for el in s.replace(' ', '')]
+    l = [int(el) for el in s.replace(' ', '')]
     return(l)
 
 
 S = str(input())
-print(Read(S))
+L = Read(S)
+print(L)
+print(type(L[1]))
