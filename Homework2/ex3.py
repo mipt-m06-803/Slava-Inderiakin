@@ -15,3 +15,4 @@ def find(s):
 
 x = str(input())
 print(find(x))
+ 
