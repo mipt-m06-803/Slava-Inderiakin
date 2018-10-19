@@ -10,3 +10,4 @@ S = str(input())
 L = Read(S)
 print(L)
 print(type(L[1]))
+ 
