@@ -12,3 +12,4 @@ def inversia(s):
 
 a = str(input())
 print(inversia(a))
+ 
