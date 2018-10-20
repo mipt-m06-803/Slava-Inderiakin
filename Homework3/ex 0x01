@@ -1,0 +1,8 @@
+def factorial(N):
+    ans = 1
+    if N > 0:
+        for i in range(1, N+1):
+            ans = ans * i
+        return(ans)
+    else:
+        return("Error!")
